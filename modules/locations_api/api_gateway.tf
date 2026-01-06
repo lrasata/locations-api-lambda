@@ -108,6 +108,7 @@ resource "aws_api_gateway_domain_name" "api" {
   endpoint_configuration {
     types = ["REGIONAL"]
   }
+  security_policy          = "TLS_1_2"
 }
 
 resource "aws_api_gateway_base_path_mapping" "api_mapping" {
