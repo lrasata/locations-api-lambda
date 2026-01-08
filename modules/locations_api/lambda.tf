@@ -33,6 +33,7 @@ resource "aws_lambda_function" "locations_api" {
   source_code_hash = data.archive_file.lambda_zip.output_base64sha256
 
   role = aws_iam_role.lambda_exec.arn
+  memory_size = var.lambda_memory_size_mb
 
   environment {
     variables = {

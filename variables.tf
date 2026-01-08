@@ -45,3 +45,10 @@ variable "sns_topic_alerts_arn" {
   description = "ARN of SNS topic alerts"
   type        = string
 }
+
+
+variable "lambda_memory_size_mb" {
+  description = "Memory size in MB value for Lambda processing file which allow faster execution"
+  type        = number
+  default     = 1024
+}
